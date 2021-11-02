@@ -44,3 +44,16 @@ Let's see what's going on step by step:
 //lets see
 
 pinki.canRun() //canRun is not a function : error
+
+/*
+Why it's giving error ?
+Because we don't have any canRun funtion in pinki object's prototype chain
+
+pinki object prototype chain should look like this: 
+pinki ---  __proto__  ---> Human.prototype -------  __proto__  -----> Object.prototype----  __proto__  ---> null
+
+and canRun function is defined in Animal.prototype
+
+So we need to think a way, so we add Animal.prototype in pinki object prototype chain
+Let's think about that in next code
+*/
